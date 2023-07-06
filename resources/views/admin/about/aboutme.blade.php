@@ -31,7 +31,9 @@
                             <div class="row mb-3">
                                 <label for="input" class="col-sm-2 col-form-label">description</label>
                                 <div class="col-sm-10">
-                                    <input name="desc" type="text" class="form-control" value="{{ $aboutPage->desc}}">
+                                    <textarea  name="desc" id="elm1">
+                                        {{ $aboutPage->desc }}
+                                    </textarea>
                                 </div>
                             </div>            
                             {{-- image profile --}}
@@ -70,5 +72,5 @@
     });
 </script>
 
-
+ 
 @endsection
