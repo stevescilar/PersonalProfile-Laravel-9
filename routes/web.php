@@ -46,15 +46,10 @@ Route::controller(HomeSliderController::class)->group(function(){
 // about controller
 Route::controller(AboutController::class)->group(function(){
 
-    // home link for about
-    // aboutfull.page
     Route::get('/about', 'aboutFull')->name('aboutfull.page');
-
-    // get the form for about manipulation
     Route::get('/about/me', 'AboutMe')->name('about.page');
-    // store or update data in database from frontend to backend and vice versa using ajax request
-
     Route::post('/update/about', 'UpdateAbout')->name('update.about');
+    Route::get('/about/tow', 'toolsOfWork')->name('about.gallery');
 
 
 });

@@ -67,5 +67,11 @@ class AboutController extends Controller
 
         return view('frontend.home_all.about_full', compact('aboutPage'));
     }
+
+    // multi image /portfolio
+
+    public function toolsOfWork(){
+        return view('admin.about.gallery');
+    }
 }
 
