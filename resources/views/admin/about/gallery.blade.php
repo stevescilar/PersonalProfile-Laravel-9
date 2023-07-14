@@ -18,9 +18,9 @@
                             @csrf          
                             {{-- image profile --}}
                             <div class="row mb-3">   
-                                <label for="input" class="col-sm-2 col-form-label">Portfolio</label>
+                                <label for="input" class="col-sm-2 col-form-label">Portfolio + </label>
                                 <div class="col-sm-10">
-                                    <input name="about_img" type="file" class="form-control" id="image" >
+                                    <input name="multi_img[]" type="file" class="form-control" id="image"  multiple="">
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -34,7 +34,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
 </div>
