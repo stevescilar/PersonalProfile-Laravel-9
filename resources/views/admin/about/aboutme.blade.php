@@ -32,7 +32,7 @@
                                 <label for="input" class="col-sm-2 col-form-label">description</label>
                                 <div class="col-sm-10">
                                     <textarea  name="desc" id="elm1">
-                                        {{ $aboutPage->desc }}
+                                        {!!  $aboutPage->desc  !!}
                                     </textarea>
                                 </div>
                             </div>            

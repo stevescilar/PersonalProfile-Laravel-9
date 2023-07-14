@@ -53,7 +53,11 @@
                             <p>{{ $aboutPage->short_title }} <br> </p>
                         </div>
                     </div>
-                    <p class="desc">{{ $aboutPage->desc}}</p>
+                    <p class="desc">
+
+                        {!! $aboutPage->desc !!}
+                    
+                    </p>
                     <a href="{{ route('aboutfull.page') }}" class="btn">Download my resume</a>
                 </div>
             </div>
