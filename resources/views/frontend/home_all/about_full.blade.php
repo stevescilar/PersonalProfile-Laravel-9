@@ -95,7 +95,7 @@
                                         <p class="desc">{!! $aboutPage->desc !!}</p>
                                         <ul class="about__exp__list">
                                             <li>
-                                                <h5 class="title">User experience design - (Product Design)</h5>
+                                                <h5 class="title">User Experience / User interface Design - (Product Design)</h5>
                                                 <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to unseery.</p>
                                             </li>
                                             <li>
