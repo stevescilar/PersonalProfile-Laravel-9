@@ -102,5 +102,10 @@ class AboutController extends Controller
 
         }
     
+    public function AllGallery(){
+        $images = MultiImage::all();
+        
+        return view('admin.about.all_images',compact('images'));
+    }
 }
 

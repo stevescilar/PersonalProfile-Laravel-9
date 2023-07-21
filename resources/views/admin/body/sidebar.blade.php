@@ -38,6 +38,7 @@
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('about.page') }}">About Page</a></li>
                         <li><a href="{{ route('about.gallery') }}">Portfolio</a></li>
+                        <li><a href="{{ route('all.about.gallery') }}">Tools_Skills</a></li>
                     </ul>
                 </li>
 

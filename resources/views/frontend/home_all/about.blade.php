@@ -58,7 +58,7 @@
                         {!! $aboutPage->desc !!}
                     
                     </p>
-                    <a href="{{ route('aboutfull.page') }}" class="btn">Download my resume</a>
+                    <a href="{{ route('aboutfull.page') }}" class="btn">See Detailed info!</a>
                 </div>
             </div>
         </div>

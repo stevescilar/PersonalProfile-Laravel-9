@@ -52,6 +52,7 @@ Route::controller(AboutController::class)->group(function(){
     Route::get('/about/tow', 'toolsOfWork')->name('about.gallery');
     // store the gallery route
     Route::post('/store/gallery', 'StoreGallery')->name('store.gallery');
+    Route::get('/all/gallery', 'AllGallery')->name('all.about.gallery');
 
 
 });
