@@ -50,6 +50,8 @@ Route::controller(AboutController::class)->group(function(){
     Route::get('/about/me', 'AboutMe')->name('about.page');
     Route::post('/update/about', 'UpdateAbout')->name('update.about');
     Route::get('/about/tow', 'toolsOfWork')->name('about.gallery');
+    // store the gallery route
+    Route::post('/store/gallery', 'StoreGallery')->name('store.gallery');
 
 
 });

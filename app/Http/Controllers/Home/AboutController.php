@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\About;
+use App\Models\MultiImage;
 use App\Models\HomeSlide;
+use Illuminate\Support\Carbon;
 
 use Image;
 
@@ -73,5 +75,32 @@ class AboutController extends Controller
     public function toolsOfWork(){
         return view('admin.about.gallery');
     }
+
+    public function StoreGallery(Request $request){
+            $image = $request->file('multi_img');
+
+            foreach($image as $multi_img) {
+                $name_gen=hexdec(uniqid()).'.'.$multi_img->getClientOriginalExtension();
+                Image::make($multi_img)->resize(220,220)->save('upload/tools/' .$name_gen);
+                $save_url = 'upload/tools/' .$name_gen;
+
+                // when updating all data
+                MultiImage::insert([
+                    
+                    'multi_img' => $save_url,
+                    'created_at' => Carbon::now()
+                ]);
+                // after successful update show notification
+                $notification = array(
+                'message' => 'Your Tools 0f work have been Updated Successfully',
+                'alert-type' =>'success'
+                );
+            } //end of foreach
+
+            return redirect()->back()->with($notification);
+
+
+        }
+    
 }
 

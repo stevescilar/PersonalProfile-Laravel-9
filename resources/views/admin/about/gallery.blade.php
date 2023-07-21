@@ -13,7 +13,7 @@
                         <h4 class="card-title" >
                            Gallery Page (My Tools of Work)
                         </h4> <br> <br>
-                        <form action="" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('store.gallery') }}" method="POST" enctype="multipart/form-data">
                             {{-- {{ route('update.about') }} --}}
                             @csrf          
                             {{-- image profile --}}
