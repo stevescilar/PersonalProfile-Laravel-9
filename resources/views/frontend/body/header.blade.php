@@ -6,8 +6,9 @@
                             <div class="menu__wrap">
                                 <nav class="menu__nav">
                                     <div class="logo">
-                                    <img src="{{ asset('logo/Muambi_dev-2.png') }}" alt="logo-sm-light" width="200px">
-
+                                        <a href="{{ route('frontend.home') }}">
+                                            <img src="{{ asset('logo/Muambi_dev-2.png') }}" alt="logo-sm-light" width="200px">
+                                        </a>
                                         {{-- <a href="{{ route('frontend.home') }}" class="logo__black"><img src="{{ asset('frontend/assets/img/logo/Muambi1992.png') }}" alt=""></a>
                                         <a href="{{ route('frontend.home') }}" class="logo__white"><img src="{{ asset('frontend/assets/img/logo/Muambi1992.png') }}" alt=""></a> --}}
                                     </div>
