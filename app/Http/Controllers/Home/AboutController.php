@@ -92,20 +92,54 @@ class AboutController extends Controller
                 ]);
                 // after successful update show notification
                 $notification = array(
-                'message' => 'Your Tools 0f work have been Updated Successfully',
+                'message' => 'Your Tools 0f work have been inserted Successfully',
                 'alert-type' =>'success'
                 );
             } //end of foreach
 
-            return redirect()->back()->with($notification);
+            return redirect()->route('all.about.gallery')->with($notification);
 
 
-        }
+    }
     
+
     public function AllGallery(){
         $images = MultiImage::all();
         
         return view('admin.about.all_images',compact('images'));
+    }
+
+    public function editGallery($id){
+        $editData =MultiImage::findOrFail($id);
+
+        return view('admin.about.edit',compact('editData'));
+
+
+    }
+
+    public function updateGallery(Request $request){
+        $multi_img_id = $request->id;
+
+        if ($request->file('multi_img')){
+            $image = $request->file('multi_img');
+            // change name
+            $name_gen = hexdec(uniqid()).'.'.$image->getClientOriginalExtension();
+            Image::make($image)->resize(220,220)->save('upload/tools/' .$name_gen);
+            $save_url = 'upload/tools/' .$name_gen;
+
+            // when updating all data
+            MultiImage::findOrFail($multi_img_id)->update([
+            
+                'multi_img' => $save_url,
+            ]);
+            // after successful update show notification
+            $notification = array(
+            'message' => 'Image/logo has been Updated Successfully',
+            'alert-type' =>'success'
+            );
+
+        return redirect()->route('all.about.gallery')->with($notification);
+        }
     }
 }
 

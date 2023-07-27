@@ -53,7 +53,7 @@
                                                 <td> <img src="{{ asset($image -> multi_img) }}"  style="width: 60px; height: 60px;">  </td>
 
                                                 <td>
-                                                    <a href="" class="btn btn-info sm" title="Edit Image"><i class="fas fa-edit"></i></a>
+                                                    <a href="{{ route('edit.images', $image->id) }}" class="btn btn-info sm" title="Edit Image"><i class="fas fa-edit"></i></a>
                                                     <a href="" class="btn btn-danger sm" title="Delete Image"><i class="fas fa-trash-alt"></i></a>
                                                 </td>
                                                 
