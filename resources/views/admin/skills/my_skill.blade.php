@@ -1,7 +1,9 @@
 @extends('admin.admin_master')
 @section('admin')
 
-
+@php
+    $skills = App\Models\Skill::all();
+@endphp
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
 <div class="page-content">
@@ -43,7 +45,27 @@
                     </div>
                 </div>
             </div>
+             <div class="col-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title" >
+                         My Skills
+
+                        </h4> 
+
+                        @foreach ( $skills as $skill)
+                        <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" id="showImage" src="{{ $skill -> skill_img }}"  class="rounded avatar-lg">
+                            <div class="card-body">
+                                {{-- <p class="card-text">{{ $skills->skill_name }}/</p> --}}
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
         </div>
+        
     </div>
 </div>
 

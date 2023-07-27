@@ -11,9 +11,10 @@ use Illuminate\Support\Carbon;
 class SkillsController extends Controller
 {
     public function MySkill(){
+        $skills = Skill::all();
         $skillPage = Skill::all();
 
-        return view('admin.skills.my_skill',compact('skillPage'));
+        return view('admin.skills.my_skill',compact('skillPage','skills'));
     }
 
     public function updateSkill(Request $request){
