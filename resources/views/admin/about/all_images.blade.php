@@ -54,7 +54,7 @@
 
                                                 <td>
                                                     <a href="{{ route('edit.images', $image->id) }}" class="btn btn-info sm" title="Edit Image"><i class="fas fa-edit"></i></a>
-                                                    <a href="" class="btn btn-danger sm" title="Delete Image"><i class="fas fa-trash-alt"></i></a>
+                                                    <a href="{{ route('delete.images', $image->id) }}" class="btn btn-danger sm" title="Delete Image" id="delete"><i class="fas fa-trash-alt"></i></a>
                                                 </td>
                                                 
                                             </tr>

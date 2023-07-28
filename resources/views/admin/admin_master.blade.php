@@ -75,7 +75,10 @@
         <script src="{{ asset('backend/assets/libs/simplebar/simplebar.min.js') }}"></script>
         <script src="{{ asset('backend/assets/libs/node-waves/waves.min.js') }}"></script>
 
-        
+        {{-- sweet alerts js --}}
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="{{ asset('backend/assets/js/code.js') }}"></script>
+
         <!-- apexcharts -->
         <script src="{{ asset('backend/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 

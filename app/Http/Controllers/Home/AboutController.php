@@ -141,5 +141,21 @@ class AboutController extends Controller
         return redirect()->route('all.about.gallery')->with($notification);
         }
     }
+
+
+    public function deleteGallery($id){
+        $image = MultiImage::findOrFail($id);
+        $img = $image->multi_img;
+
+        unlink($img);
+        MultiImage::findOrFail($id)->delete();
+
+        $notification = array(
+        'message' => 'Image/logo has been deleted Successfully',
+        'alert-type' =>'success'
+        );
+
+    return redirect()->route('all.about.gallery')->with($notification);
+    }
 }
 

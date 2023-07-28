@@ -57,6 +57,7 @@ Route::controller(AboutController::class)->group(function(){
     Route::get('/all/gallery', 'AllGallery')->name('all.about.gallery');
     Route::get('/edit/gallery/{id}', 'editGallery')->name('edit.images');
     Route::post('/update/gallery', 'UpdateGallery')->name('update.gallery');
+    Route::get('/delete/gallery/{id}', 'deleteGallery')->name('delete.images');
 
 
 
