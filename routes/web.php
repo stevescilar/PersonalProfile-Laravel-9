@@ -6,6 +6,7 @@ use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SkillsController;
+use App\Http\Controllers\Home\PortfolioController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -58,10 +59,6 @@ Route::controller(AboutController::class)->group(function(){
     Route::get('/edit/gallery/{id}', 'editGallery')->name('edit.images');
     Route::post('/update/gallery', 'UpdateGallery')->name('update.gallery');
     Route::get('/delete/gallery/{id}', 'deleteGallery')->name('delete.images');
-
-
-
-
 });
 
 // skills controller
@@ -69,8 +66,15 @@ Route::controller(SkillsController::class)->group(function(){
 
     Route::get('/skills', 'MySkill')->name('my.skill');
     Route::post('/skills/update', 'updateSkill')->name('update.skill');
-
 });
+
+// portfolio controller
+Route::controller(PortfolioController::class)->group(function(){ 
+    Route::get('/home/portfolio', 'homePortfolio')->name('home.portfolio');
+    // Route::post('/update/slide', 'UpdateSlider')->name('update.slider');
+});
+
+
 
 
 require __DIR__.'/auth.php';

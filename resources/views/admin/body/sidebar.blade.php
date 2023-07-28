@@ -30,19 +30,30 @@
                         <li><a href="{{ route('home.slide') }}">Home Slide</a></li>
                     </ul>
                 </li>
-                    <li>
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
                         <span>About Page Settings</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('about.page') }}">About Page</a></li>
-                        <li><a href="{{ route('about.gallery') }}">Portfolio</a></li>
+                        <li><a href="{{ route('about.gallery') }}">SKills Images</a></li>
                         <li><a href="{{ route('all.about.gallery') }}">Tools_Skills</a></li>
                     </ul>
                 </li>
-
-                 <li>
+                {{-- home.portfolio --}}
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-folder-3-fill"></i>
+                        <span>Portfolio Setup</span> 
+                        {{-- folder-3-fill --}}
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li> <a href="{{ route('home.portfolio') }}"><i class="ri-aspect-ratio-line"></i>My Portfolio</a></li>
+                        <li><a href=""> <i class="ri-add-circle-line"></i> Add Portfolio</a></li>
+                    </ul>
+                </li>
+                <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-mail-send-line"></i>
                         <span>Skills Area</span>
