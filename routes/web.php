@@ -71,6 +71,8 @@ Route::controller(SkillsController::class)->group(function(){
 // portfolio controller
 Route::controller(PortfolioController::class)->group(function(){ 
     Route::get('/home/portfolio', 'homePortfolio')->name('home.portfolio');
+    Route::get('/add/portfolio', 'addPortfolio')->name('add.portfolio');
+    Route::post('/store/data','StoreData')->name('store');
     // Route::post('/update/slide', 'UpdateSlider')->name('update.slider');
 });
 

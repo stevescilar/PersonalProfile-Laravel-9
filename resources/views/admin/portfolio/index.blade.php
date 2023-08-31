@@ -39,8 +39,9 @@
                                                 <th>SL</th>
                                                 <th>Portfolio Name</th>
                                                 <th>Portfolio Title</th>
-                                                <th>Portfolio Image</th>
                                                 <th>Portfolio Description</th>
+                                                <th>Portfolio Image</th>
+
                                                 <th>Action</th>
                                                 
                                             </thead>
@@ -53,10 +54,11 @@
                                                
                                             <tr>
                                                 <td> {{ $i++ }}</td>
-                                                <td> <img src="{{ asset($portfolio->portfolio_name ) }}"  style="width: 60px; height: 60px;">  </td>
-                                                <td> <img src="{{ asset($portfolio->portfolio_title ) }}"  style="width: 60px; height: 60px;">  </td>
-                                                <td> <img src="{{ asset($portfolio->portfolio_image ) }}"  style="width: 60px; height: 60px;">  </td>
-                                                <td> <img src="{{ asset($portfolio->portfolio_desc ) }}"  style="width: 60px; height: 60px;">  </td>
+                                                <td>{{ $portfolio->portfolio_name }}</td>
+                                                <td>{{ $portfolio->portfolio_title }}</td>
+                                                <td>{{ $portfolio->portfolio_desc }}</td>
+                                                <td> <img src="{{ asset($portfolio->portfolio_image ) }}"  style="width: 250px; height: 60px;">  </td>
+
                                                 <td>
                                                     <a href="" class="btn btn-info sm" title="Edit Image"><i class="fas fa-edit"></i></a>
                                                     <a href="" class="btn btn-danger sm" title="Delete Image" id="delete"><i class="fas fa-trash-alt"></i></a>

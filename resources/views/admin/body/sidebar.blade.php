@@ -50,7 +50,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li> <a href="{{ route('home.portfolio') }}"><i class="ri-aspect-ratio-line"></i>My Portfolio</a></li>
-                        <li><a href=""> <i class="ri-add-circle-line"></i> Add Portfolio</a></li>
+                        <li><a href="{{ route('add.portfolio') }}"> <i class="ri-add-circle-line"></i> Add Portfolio</a></li>
                     </ul>
                 </li>
                 <li>
