@@ -73,6 +73,7 @@ Route::controller(PortfolioController::class)->group(function(){
     Route::get('/home/portfolio', 'homePortfolio')->name('home.portfolio');
     Route::get('/add/portfolio', 'addPortfolio')->name('add.portfolio');
     Route::post('/store/data','StoreData')->name('store');
+    Route::get('/edit/portfolio/{id}', 'EditPortfolio')->name('edit.portfolio');
     // Route::post('/update/slide', 'UpdateSlider')->name('update.slider');
 });
 

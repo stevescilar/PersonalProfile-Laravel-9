@@ -60,8 +60,8 @@
                                                 {{-- <td>{{ $portfolio->portfolio_desc }}</td> --}}
 
                                                 <td>
-                                                    <a href="" class="btn btn-info sm" title="Edit Image"><i class="fas fa-edit"></i></a>
-                                                    <a href="" class="btn btn-danger sm" title="Delete Image" id="delete"><i class="fas fa-trash-alt"></i></a>
+                                                    <a href="{{ route('edit.portfolio',$portfolio->id) }}" class="btn btn-info sm" title="Edit Data"><i class="fas fa-edit"></i></a>
+                                                    <a href="{{ route('delete.portfolio',$portfolio->id) }}" class="btn btn-danger sm" title="Delete Data" id="delete"><i class="fas fa-trash-alt"></i></a>
                                                 </td>
                                                 
                                             </tr>

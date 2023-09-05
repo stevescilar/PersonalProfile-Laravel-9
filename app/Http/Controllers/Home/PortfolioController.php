@@ -53,6 +53,12 @@ class PortfolioController extends Controller
         return redirect()->route('home.portfolio')->with($notification);
             
     }
+
+    public function EditPortfolio($id) {
+        $portfolio = Portfolio::findOrFail(id);
+        return view ('admin.portfolio.edit', compact('portfolio'));
+
+    }
 }
 
 
