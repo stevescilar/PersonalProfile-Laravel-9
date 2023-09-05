@@ -40,7 +40,7 @@
                                                 <th>Portfolio Name</th>
                                                 <th>Portfolio Title</th>
                                                 <th>Portfolio Image</th>
-                                                <th>Portfolio Description</th>
+                                                {{-- <th>Portfolio Description</th> --}}
 
                                                 <th>Action</th>
                                                 
@@ -57,7 +57,7 @@
                                                 <td>{{ $portfolio->portfolio_name }}</td>
                                                 <td>{{ $portfolio->portfolio_title }}</td>
                                                 <td> <img src="{{ asset($portfolio->portfolio_image ) }}"  style="width: 60px; height: 60px;">  </td>
-                                                <td>{{ $portfolio->portfolio_desc }}</td>
+                                                {{-- <td>{{ $portfolio->portfolio_desc }}</td> --}}
 
                                                 <td>
                                                     <a href="" class="btn btn-info sm" title="Edit Image"><i class="fas fa-edit"></i></a>
