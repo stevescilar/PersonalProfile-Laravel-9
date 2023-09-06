@@ -7,6 +7,7 @@ use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\Home\PortfolioController;
+use App\Http\Controllers\BlogCategoryController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -82,6 +83,14 @@ Route::controller(PortfolioController::class)->group(function(){
 
 });
 
+Route::controller(BlogCategoryController::class)->group(function(){
+    Route::get('/all/blog/categories', 'AllCategory')->name('all.category');
+    Route::get('/add/blog/category','AddCat')->name('add.category');
+    Route::post('/store/blog-category/', 'StoreCategory')->name('store');
+    Route::get('/blog/category/edit/{id}','EditCat')->name('edit.blogCat');
+    Route::post('/update/category','UpdateCat')->name('update');
+    Route::get('/blog/category/delete/{id}','DeleteCat')->name('delete.blogCat');
+});
 
 
 

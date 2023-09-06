@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title" >
-                           Add to Portfolio 
+                           Edit Portfolio 
                         </h4> <br> <br>
                         <form action="{{ route('update.data') }}" method="POST" enctype="multipart/form-data">
                             @csrf

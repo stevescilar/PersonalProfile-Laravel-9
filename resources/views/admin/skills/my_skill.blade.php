@@ -55,7 +55,7 @@
 
                         @foreach ( $skills as $skill)
                         <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" id="showImage" src="{{ $skill -> skill_img }}"  class="rounded avatar-lg">
+                        <img class="card-img-top" id="showImage" src="{{ $skill->skill_img }}"  class="rounded avatar-lg">
                             <div class="card-body">
                                 {{-- <p class="card-text">{{ $skills->skill_name }}/</p> --}}
                             </div>
