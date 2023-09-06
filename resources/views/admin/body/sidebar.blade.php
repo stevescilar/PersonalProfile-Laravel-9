@@ -37,7 +37,7 @@
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
                         <li><a href="{{ route('about.page') }}">About Page</a></li>
-                        <li><a href="{{ route('about.gallery') }}">SKills Images</a></li>
+                        <li><a href="{{ route('about.gallery') }}">Add Tools of Work</a></li>
                         <li><a href="{{ route('all.about.gallery') }}">Tools_Skills</a></li>
                     </ul>
                 </li>

@@ -74,7 +74,12 @@ Route::controller(PortfolioController::class)->group(function(){
     Route::get('/add/portfolio', 'addPortfolio')->name('add.portfolio');
     Route::post('/store/data','StoreData')->name('store');
     Route::get('/edit/portfolio/{id}', 'EditPortfolio')->name('edit.portfolio');
-    // Route::post('/update/slide', 'UpdateSlider')->name('update.slider');
+    Route::post('/update/data','UpdateData')->name('update.data');
+    Route::get('/delete/data/{id}', 'DeleteData')->name('delete.portfolio');
+
+    // portfolio details per id
+    Route::get('/portfolio/details/{id}','PortfolioDetails')->name('portfolio.details');
+
 });
 
 

@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0">Tools of Work</h4>
+                                    <h4 class="mb-sm-0">Tools of Work | <a href="{{ route('about.gallery') }}">Add Tools of Work</a></h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
