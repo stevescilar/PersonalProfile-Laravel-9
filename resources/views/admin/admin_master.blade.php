@@ -19,7 +19,8 @@
 
         <!-- Responsive datatable examples -->
         <link href="{{ asset('backend/assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />  
-
+        {{-- tags css --}}
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.css" >
         <!-- Bootstrap Css -->
         <link href="{{ asset('backend/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <!-- Icons Css -->
@@ -110,7 +111,7 @@
         <!-- Required datatable js -->
         <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
         <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script> --}}
-
+        <script src="https://cdn.jsdelivr.net/bootstrap.tagsinput/0.8.0/bootstrap-tagsinput.min.js" ></script>
         <script>
         @if(Session::has('message'))
         var type = "{{ Session::get('alert-type','info') }}"

@@ -8,6 +8,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SkillsController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\Home\BlogController;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -92,6 +94,13 @@ Route::controller(BlogCategoryController::class)->group(function(){
     Route::get('/blog/category/delete/{id}','DeleteCat')->name('delete.blogCat');
 });
 
+// blogcontroller - pages
+Route::controller(BlogController::class)->group(function () {
+    Route::get('/all/blog', 'AllBlog')->name('all.blog');
+    Route::get('/add/blog','AddBlog')->name('add.blog');
+    Route::post('/store/blog', 'StoreBlog')->name('store');
 
+
+});
 
 require __DIR__.'/auth.php';
